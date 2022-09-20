@@ -76,7 +76,8 @@ resource "aws_autoscaling_group" "vault" {
 }
 
 module "acm-cloudflare" {
-  source      = "../terraform-aws-acm-cloudflare"
+  source      = "app.terraform.io/low613/acm-cloudflare/aws"
+  version     = "0.1.0"
   domain_name = var.domain_name
   zone_name   = var.zone_name
 }
